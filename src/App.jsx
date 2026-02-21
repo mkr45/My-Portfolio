@@ -1,12 +1,27 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import About from './pages/About'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
+import Education from './pages/Education'
+import Experience from './pages/Experience'
+import SkillsTools from './pages/Skills-Tools'
+import Stats from'./pages/Stats'
 
-function App() {
+export default function App() {
   return (
-     <>
-     <Home/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />}  />
+        <Route path="/education" element={<Education />}  />
+        <Route path="/experience" element={<Experience />}  />
+        <Route path="/skills-tools" element={<SkillsTools />}  />
+        <Route path="/stats" element={<Stats />}  />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
