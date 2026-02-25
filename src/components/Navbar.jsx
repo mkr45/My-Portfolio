@@ -1,10 +1,11 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Navbar() {
   const [currentTime, setCurrentTime] = useState("");
+  const audioRef = useRef(null);
 
   useEffect(() => {
     function getCurrentTime24Hour() {
@@ -12,44 +13,54 @@ export default function Navbar() {
       const hours = now.getHours().toString().padStart(2, "0");
       const minutes = now.getMinutes().toString().padStart(2, "0");
       const seconds = now.getSeconds().toString().padStart(2, "0");
-
       setCurrentTime(`${hours}:${minutes}:${seconds}`);
     }
 
     getCurrentTime24Hour();
     const intervalId = setInterval(getCurrentTime24Hour, 1000);
-
     return () => clearInterval(intervalId);
   }, []);
+
+  function playMusic() {
+    const music = audioRef.current;
+    if (!music) return;
+
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+  }
 
   return (
     <div className="nav">
       <div className="nav-start">
         <img
           src="https://img.icons8.com/?size=100&id=gpEXladfxpZd&format=png&color=1A1A1A"
-          alt="music"
+          alt="logo"
           className="icon"
         />
+
         <Link to="/" className="name" style={{ paddingLeft: "0.8em" }}>
           mayank.is-dev
         </Link>
+
         <div className="nav-links">
-          <Link to="/" className="home">
-            Home
-          </Link>
+          <Link to="/" className="home">Home</Link>
 
           <a
+            href="https://www.linkedin.com/in/mayank-kumar-42139621a/"
             target="_blank"
             rel="noreferrer"
-            href="https://www.linkedin.com/in/mayank-kumar-42139621a/"
             className="home"
           >
             Linkedin
           </a>
+
           <a
+            href="https://drive.google.com/file/d/1VyAPpX0a5qW4yDBw5Dvxibu8R75wU2h0/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/1VyAPpX0a5qW4yDBw5Dvxibu8R75wU2h0/view?usp=sharing"
             className="home"
           >
             Resume
@@ -68,17 +79,28 @@ export default function Navbar() {
           <div className="time-text">{currentTime}</div>
         </div>
 
+        {/* 🎵 AUDIO */}
+        <audio
+          ref={audioRef}
+          src="/src/assets/andriig-relax-relaxing-music-487214.mp3"
+          preload="auto"
+        />
+
+        {/* 🎵 PLAY / PAUSE BUTTON */}
         <img
           src="https://img.icons8.com/?size=100&id=aanJRSdBR4ug&format=png&color=000000"
           alt="music"
           className="icon"
+          onClick={playMusic}   
         />
+
         <img
           src="https://img.icons8.com/?size=100&id=45474&format=png&color=000000"
           alt="mode"
           className="icon"
         />
-        <a href="https://github.com/mkr45" target="_blank" el="noreferrer">
+
+        <a href="https://github.com/mkr45" target="_blank" rel="noreferrer">
           <img
             src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000"
             alt="GitHub"
