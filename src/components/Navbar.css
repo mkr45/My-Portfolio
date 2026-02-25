@@ -1,0 +1,82 @@
+.nav{
+    max-width: 100%;
+    background-color: #ffffff;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    gap:0px;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 0.1px solid hsl(0, 22%, 90%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-start{
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    background-color: red;
+    gap: 0px;
+    background-color: #ffffff;
+}
+
+.nav-end{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ffffff;
+    width: 60%;
+    gap: 1.5em;
+    color: rgb(238, 231, 231);
+}
+
+.name{
+     font-weight: bold;
+     width:8em;
+     text-decoration: none;
+     color: black;
+}
+
+.home{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ width: 15em;
+}
+
+.icon {
+    height: 2em;
+    width: 2em;
+}
+
+.time{ 
+    width: 7em;
+    height: 2em;
+    background-color: #fafafa;
+    border: 0.1px solid #c4c3c3;
+    display: flex;
+    flex-direction:row;
+    border-radius: 3em;
+    align-items: center;
+}
+
+.green-icon{
+    height: 1em;
+}
+
+.time-text{
+    color: black;
+}
