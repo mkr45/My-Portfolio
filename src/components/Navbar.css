@@ -1,82 +1,90 @@
-.nav{
-    max-width: 100%;
-    background-color: #ffffff;
-    height: 8vh;
-    display: flex;
-    flex-direction: row;
-    gap:0px;
-    padding-left: 2em;
-    padding-right: 2em;
-    border: 0.1px solid hsl(0, 22%, 90%);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+.nav {
+  max-width: 100%;
+  background-color: #ffffff;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2em;
+  padding-right: 2em;
+  border: 0.1px solid hsl(0, 22%, 90%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
-.nav-start{
-    display: flex;
-    max-width: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 40%;
-    background-color: red;
-    gap: 0px;
-    background-color: #ffffff;
+/* LEFT SIDE */
+.nav-start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40%;
+  background-color: #ffffff;
 }
 
-.nav-end{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #ffffff;
-    width: 60%;
-    gap: 1.5em;
-    color: rgb(238, 231, 231);
+/* RIGHT SIDE */
+.nav-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 60%;
+  gap: 1.5em;
 }
 
-.name{
-     font-weight: bold;
-     width:8em;
-     text-decoration: none;
-     color: black;
+/* NAME */
+.name {
+  font-weight: bold;
+  width: 8em;
+  text-decoration: none;
+  color: black;
 }
 
-.home{
-    text-decoration: none;
-    color: black;
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
 }
 
-.nav-links{
- display: flex;
- flex-direction: row;
- justify-content: space-evenly;
- width: 15em;
+/* INDIVIDUAL LINKS */
+.home {
+  text-decoration: none;
+  color: black;
+  padding: 0.35em 0.6em;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
 }
 
+.home:hover {
+  background-color: #f2f2f2;
+}
+
+/* ICONS */
 .icon {
-    height: 2em;
-    width: 2em;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
 }
 
-.time{ 
-    width: 7em;
-    height: 2em;
-    background-color: #fafafa;
-    border: 0.1px solid #c4c3c3;
-    display: flex;
-    flex-direction:row;
-    border-radius: 3em;
-    align-items: center;
+/* TIME BOX */
+.time {
+  width: 7em;
+  height: 2em;
+  background-color: #fafafa;
+  border: 0.1px solid #c4c3c3;
+  display: flex;
+  border-radius: 3em;
+  align-items: center;
+  padding: 0 0.5em;
 }
 
-.green-icon{
-    height: 1em;
+.green-icon {
+  height: 1em;
 }
 
-.time-text{
-    color: black;
+.time-text {
+  color: black;
+  margin-left: 0.4em;
 }

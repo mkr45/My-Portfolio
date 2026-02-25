@@ -35,11 +35,14 @@ export default function Navbar() {
   return (
     <div className="nav">
       <div className="nav-start">
-        <img
+        <Link to="/">
+         <img
           src="https://img.icons8.com/?size=100&id=gpEXladfxpZd&format=png&color=1A1A1A"
           alt="logo"
           className="icon"
         />
+        </Link>
+       
 
         <Link to="/" className="name" style={{ paddingLeft: "0.8em" }}>
           mayank.is-dev
@@ -47,16 +50,25 @@ export default function Navbar() {
 
         <div className="nav-links">
           <Link to="/" className="home">Home</Link>
-
-          <a
+        
+        <div>
+           <a
             href="https://www.linkedin.com/in/mayank-kumar-42139621a/"
             target="_blank"
             rel="noreferrer"
             className="home"
           >
             Linkedin
+              <img
+          src="https://img.icons8.com/?size=100&id=60664&format=png&color=1A1A1A"
+          alt="Link"
+          style={{height: "0.9em", width: "1em", paddingLeft: "0.3em",}}
+ 
+        />
           </a>
-
+        </div>
+         
+  <div>
           <a
             href="https://drive.google.com/file/d/1VyAPpX0a5qW4yDBw5Dvxibu8R75wU2h0/view?usp=sharing"
             target="_blank"
@@ -64,7 +76,14 @@ export default function Navbar() {
             className="home"
           >
             Resume
+               <img
+          src="https://img.icons8.com/?size=100&id=60664&format=png&color=1A1A1A"
+          alt="Link"
+          style={{height: "0.9em", width: "1em", paddingLeft: "0.3em"}}
+ 
+        />
           </a>
+          </div>
         </div>
       </div>
 
