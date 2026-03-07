@@ -39,7 +39,7 @@ export default function Navbar() {
          <img
           src="https://img.icons8.com/?size=100&id=gpEXladfxpZd&format=png&color=1A1A1A"
           alt="logo"
-          className="icon"
+          className="icon-home"
         />
         </Link>
        
@@ -123,7 +123,7 @@ export default function Navbar() {
           <img
             src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000"
             alt="GitHub"
-            className="icon"
+            className="icon-github"
           />
         </a>
       </div>

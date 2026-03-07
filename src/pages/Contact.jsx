@@ -38,7 +38,7 @@ const notify = () => {
         description=""
       />
 
-      <form ref={form} onSubmit={sendEmail} style={{display: "flex", flexDirection: "column"}}>
+      <form ref={form} onSubmit={sendEmail} style={{display: "flex", flexDirection: "column", width: "90%",}}>
         <label htmlFor="user_name" style={{display: "flex"}}>
           <p>Name</p>
           <p style={{color: "red"}}>*</p>

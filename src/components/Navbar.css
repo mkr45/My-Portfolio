@@ -90,3 +90,14 @@
   margin-left: 0.4em;
   font-size: 0.9em;
 }
+.icon-home{
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+}
+
+.icon-github{
+   height: 1.5em;
+  width: 1.5em;
+  cursor: pointer;
+}

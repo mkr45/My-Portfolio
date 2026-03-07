@@ -23,4 +23,5 @@ body {
 .page-inner {
   display: flex;
   align-items: flex-start;
+  width: 100%;
 }
