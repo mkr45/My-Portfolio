@@ -1,6 +1,6 @@
 import "./Project.css"
 import { Link } from "react-router-dom";
-import ProjectCard from "../components/Project-card"
+import ProjectCard from "../components/Project-Card"
 import NavigationBtnPrev from "../components/Navigation-Btn-Prev"
 import NavigationBtn from "../components/Navigation-Btn";
 import PageHeader from "../components/PageHeader";
