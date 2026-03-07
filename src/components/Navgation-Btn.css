@@ -1,0 +1,18 @@
+.nav-btn{
+    background-color: white;
+    min-height: 2.5em;
+    min-width: 5em; 
+    border-radius: 0.4em;
+    cursor: pointer;
+    border-style: none;
+    font-size:medium;
+    display: flex;
+    flex-direction: row;
+    gap:0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn:hover{
+  background-color: rgb(240, 240, 240);
+}

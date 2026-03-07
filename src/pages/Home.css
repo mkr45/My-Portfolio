@@ -1,0 +1,55 @@
+.btn-outline {
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.btn-outline:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+/* Home page styles moved from inline JSX */
+.home {
+  display: block;
+}
+.home-title {
+  font-weight: 700;
+  font-size: 2.2em;
+  margin: 0 0 0.25em 0;
+}
+.home-subtitle {
+  font-weight: 700;
+  font-size: 2.2em;
+  color: oklch(55.2% .016 285.938);
+  margin: 0 0 0.5em 0;
+}
+.home-desc {
+  line-height: 1.6em;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* place one button at start and the other at end */
+  align-items: center;
+  gap: 1.5em;
+  height: 3em;
+  width: 18em;
+}
+.btn-primary {
+  width: 8.5em;
+  height: 2.2em;
+  border-radius: 0.4em;
+  background-color: oklch(60.6% .25 292.717);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-primary a { text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 0.35em }
+.btn-primary img { height: 1em; width: 1em; display: inline-block }
+.btn-outline { width: 8.5em; height: 2.2em; border-radius: 0.4em; display:flex; justify-content:center; align-items:center; gap:0.5em }
+.btn-outline img { height:1.5em; width:1.5em }
+.btn-link { text-decoration: none; color: inherit; display:inline-flex; align-items:center; gap:0.35em }
+

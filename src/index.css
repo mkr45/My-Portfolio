@@ -15,7 +15,8 @@ body {
 }
 
 .content {
-  flex-grow: 1;
+  flex: 1 1 auto;
+  min-width: 0; /* allows the content to shrink/wrap without forcing siblings to overflow */
   padding: 2rem;
 }
 

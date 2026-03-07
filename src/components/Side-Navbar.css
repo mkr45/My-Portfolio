@@ -1,5 +1,8 @@
 .side-navbar {
   width: 18em;
+  flex: 0 0 18em; 
+  min-width: 18em;
+  box-sizing: border-box;
 
   position: sticky;
   top: 8vh;

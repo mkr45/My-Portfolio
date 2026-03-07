@@ -1,0 +1,19 @@
+.page-title {
+  font-weight: 700;
+  font-size: 2.2em;
+  margin: 0 0 0.25em 0;
+}
+
+.page-subtitle {
+  font-weight: 700;
+  font-size: 2.2em;
+  color: oklch(55.2% .016 285.938);
+  margin: 0 0 0.5em 0;
+}
+
+.page-desc {
+  line-height: 1.6em;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
