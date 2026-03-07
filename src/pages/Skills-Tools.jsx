@@ -5,58 +5,71 @@ import NavigationBtnPrev from "../components/Navigation-Btn-Prev";
 import PageHeader from "../components/PageHeader";
 import { Link } from "react-router-dom";
 
+
+
 export default function SkillsTools() {
   const items = [
-    {
+    { id: 1,
       name: "HTML",
       icon: "https://img.icons8.com/?size=100&id=20909&format=png&color=000000",
     },
-    {
+    {id: 2,
       name: "CSS",
       icon: "https://img.icons8.com/?size=100&id=AY9OsTxmB7MH&format=png&color=000000",
     },
     {
+      id: 3,
       name: "JavaScript",
       icon: "https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000",
     },
-    {
+    { 
+      id: 4,
       name: "NodeJS",
       icon: "https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000",
     },
     {
+      id: 5,
       name: "MongoDB",
       icon: "https://img.icons8.com/?size=100&id=cREyrHivHRHF&format=png&color=000000",
     },
-    { name: "EmberJS", icon: "src/assets/icons8-ember-96.png" },
+    { id: 6, name: "EmberJS", icon: "src/assets/icons8-ember-96.png" },
     {
+      id: 7,
       name: "ReactJS",
       icon: "https://img.icons8.com/?size=100&id=NfbyHexzVEDk&format=png&color=000000",
     },
     {
+      id: 8,
       name: "Redux",
       icon: "https://img.icons8.com/?size=100&id=jD-fJzVguBmw&format=png&color=000000",
     },
     {
+      id: 9,
       name: "ExpressJS",
       icon: "https://img.icons8.com/?size=100&id=9Gfx4Dfxl0JK&format=png&color=000000",
     },
     {
+      id: 10,
       name: "Vercel",
       icon: "https://img.icons8.com/?size=100&id=NJKamAy8tnNG&format=png&color=000000",
     },
     {
+      id: 11,
       name: "Git",
       icon: "https://img.icons8.com/?size=100&id=20906&format=png&color=000000",
     },
     {
+      id: 12,
       name: "GitHub",
       icon: "https://img.icons8.com/?size=100&id=62856&format=png&color=000000",
     },
     {
+      id: 13,
       name: "Postman",
       icon: "https://img.icons8.com/?size=100&id=EPbEfEa7o8CB&format=png&color=000000",
     },
     {
+      id : 14,
       name: "npm",
       icon: "https://img.icons8.com/?size=100&id=24895&format=png&color=000000",
     },

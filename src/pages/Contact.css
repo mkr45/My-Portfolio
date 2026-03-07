@@ -1,0 +1,51 @@
+input::placeholder{
+  color: #999;
+  font-size: 1.2em;
+  
+}
+
+textarea {
+  font: inherit;
+  padding: 1em;
+    
+}
+
+textarea::placeholder {
+  color: #999;
+  font-size: 1em;
+  font-style: inherit;
+}
+
+
+textarea:focus{
+outline:  solid #8f53ff;
+}
+
+input:focus {
+   outline:  solid #8f53ff;
+}
+
+input{
+    
+  padding-left: 2em; 
+}
+
+input[type="submit"] {
+  background-color: #8f53ff;
+  transition: background-color 0.1s;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover{
+  background-color: #9b45f7;
+}
+
+input[type="reset"] {
+  background-color: white;
+  transition: background-color 0.1s;
+  cursor: pointer;
+}
+
+input[type="reset"]:hover{
+  background-color: #f2f1f2;
+}

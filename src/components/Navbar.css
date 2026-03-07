@@ -63,15 +63,15 @@
 
 /* ICONS */
 .icon {
-  height: 2em;
-  width: 2em;
+  height: 1.2em;
+  width: 1.2em;
   cursor: pointer;
 }
 
 /* TIME BOX */
 .time {
-  width: 7em;
-  height: 2em;
+  width: 5em;
+  height: 1.5em;
   background-color: #fafafa;
   border: 0.1px solid #c4c3c3;
   display: flex;
@@ -82,9 +82,11 @@
 
 .green-icon {
   height: 1em;
+  width: 3em;
 }
 
 .time-text {
   color: black;
   margin-left: 0.4em;
+  font-size: 0.9em;
 }
