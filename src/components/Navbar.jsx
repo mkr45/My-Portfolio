@@ -101,7 +101,7 @@ export default function Navbar() {
         {/* 🎵 AUDIO */}
         <audio
           ref={audioRef}
-          src="/src/assets/andriig-relax-relaxing-music-487214.mp3"
+          src="src/assets/Melodies of India.mp3"
           preload="auto"
         />
 
