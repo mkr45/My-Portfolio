@@ -4,6 +4,7 @@ import NavigationBtn from "../components/Navigation-Btn";
 import NavigationBtnPrev from "../components/Navigation-Btn-Prev";
 import PageHeader from "../components/PageHeader";
 import { Link } from "react-router-dom";
+import emberIcon from "../assets/icons8-ember-96.png";
 
 
 
@@ -32,7 +33,7 @@ export default function SkillsTools() {
       name: "MongoDB",
       icon: "https://img.icons8.com/?size=100&id=cREyrHivHRHF&format=png&color=000000",
     },
-    { id: 6, name: "EmberJS", icon: "src/assets/icons8-ember-96.png" },
+    { id: 6, name: "EmberJS", icon: emberIcon },
     {
       id: 7,
       name: "ReactJS",
