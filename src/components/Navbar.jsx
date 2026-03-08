@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import melodiesOfIndia from "../assets/Melodies of India.mp3";
 
 export default function Navbar() {
   const [currentTime, setCurrentTime] = useState("");
@@ -101,7 +102,7 @@ export default function Navbar() {
         {/* 🎵 AUDIO */}
         <audio
           ref={audioRef}
-          src="src/assets/Melodies of India.mp3"
+          src={melodiesOfIndia}
           preload="auto"
         />
 
