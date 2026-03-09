@@ -76,6 +76,20 @@ export default function Stats() {
           subHeading={repo}
         />
       </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                paddingTop: "2em",
+                width: "100%",
+              }}
+            >
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <NavigationBtnPrev text="Contact" />
+              </Link>
+            </div>
+
     </>
   );
 }
