@@ -57,7 +57,7 @@ export default function Stats() {
           flexWrap: "wrap",
           alignItems: "center",
           justifyContent: "flex-start",
-          gap: "1em",
+          gap: "2em",
           marginTop: "3em"
         }}
       >
