@@ -1,22 +1,20 @@
-import "./Project-Card.css"
-
-export default function ProjectCard (props) {
-
-    return(
-        <>
-        <div className="box">
-        <div className="heading">
-         {props.heading}
-         uadgfhakfhkhaskjdfhajks
-        </div>
-        <div className="desc">
-         {props.desc}
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque exercitationem, aliquam at ea nihil rerum perferendis maxime recusandae 
-        </div>
-        <div className="desc">
-         Learn More...
-        </div>
-        </div>
-        </>
-    )
+import "./Project-Card.css";
+import { Link } from "react-router-dom";
+export default function ProjectCard({ projects }) {
+  return (
+    <>
+      {projects.map((project) => (
+        <Link
+          to={`/projects/${project.heading}`}
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          <div className="box">
+            <div className="heading">{project.heading}</div>
+            <div className="desc">{project.desc}</div>
+            <div className="desc">Learn More...</div>
+          </div>
+        </Link>
+      ))}
+    </>
+  );
 }
