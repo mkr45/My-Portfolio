@@ -30,12 +30,27 @@ export const projectsData = [
     ],
     feedback: [],
 
-    techstack: [],
-    links: 
+    techstack: [
       {
-        live: "https://my-portfolio-theta-gules-10.vercel.app/",
-        github: "https://github.com/mkr45/My-Portfolio",
+        id: 1,
+        techName: "javascript",
       },
-
+      {
+        id: 2,
+        techName: "CSS",
+      },
+      {
+        id: 3,
+        techName: "ReactJS",
+      },
+      {
+        id: 4,
+        techName: "emailJs",
+      },
+    ],
+    links: {
+      live: "https://my-portfolio-theta-gules-10.vercel.app/",
+      github: "https://github.com/mkr45/My-Portfolio",
+    },
   },
 ];
