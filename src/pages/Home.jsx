@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import NavigationBtn from "../components/Navigation-Btn";
 import PageHeader from "../components/PageHeader";
+import { useSelector } from "react-redux";
 
 export default function Home() {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
   return (
     <>
       <PageHeader
@@ -30,7 +32,7 @@ export default function Home() {
 
         <div className="btn-outline">
           <img
-            src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=1A1A1A"
+            src={isDarkMode ? "https://img.icons8.com/ios-filled/50/FFFFFF/gmail-new.png" : "https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=1A1A1A"}
             alt="Email"
           />
           <a
