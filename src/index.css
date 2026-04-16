@@ -5,7 +5,8 @@ html, body {
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
+  color: var(--text-color)
 }
 
 .page {
@@ -24,4 +25,24 @@ body {
   display: flex;
   align-items: flex-start;
   width: 100%;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --border-color: hsl(0, 22%, 90%);
+  --nav-bg: #ffffff;
+  --nav-blur: none;
+  --hover-bg: #f2f2f2;
+  --time-bg: #fafafa;
+  --muted-text: #999;
+  --card-bg: #fff;
+  --card-border: rgb(226, 224, 224);
+  --secondary-bg: #f2f1f2;
+  --nav-link-color: oklch(42.571% 0.00822 285.966);
+  --chip-bg: rgb(0, 0, 0);
+  --chip-text: aliceblue;
+  --subtitle-color: oklch(55.2% .016 285.938);
+  --stats-heading: oklch(55.2% .016 285.938);
+  --hireable-bg: oklch(0.93 0.06 152.3);
 }

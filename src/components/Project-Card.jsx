@@ -6,7 +6,7 @@ export default function ProjectCard({ projects }) {
       {projects.map((project) => (
         <Link
           to={`/projects/${project.heading}`}
-          style={{ textDecoration: "none", color: "black" }}
+          style={{ textDecoration: "none", color: "var(--text-color)" }}
         >
           <div className="box">
             <div className="heading">{project.heading}</div>

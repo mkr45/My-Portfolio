@@ -3,10 +3,16 @@ import PageHeader from "../components/PageHeader";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import GithubStatsCard from "../components/Github-Stats-Card";
+import { useSelector } from "react-redux";
 
 export default function Stats() {
   const [contributions, setContributions] = useState("...");
   const [repo, setrepo] = useState("");
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
+  const bgColor = isDarkMode ? "1a1a1a" : "ffffff";
+  const textColor = isDarkMode ? "aaaaaa" : "333";
+  const dateColor = isDarkMode ? "888888" : "555";
 
   useEffect(() => {
     fetch(`https://github-contributions-api.deno.dev/mkr45.json`)
@@ -40,12 +46,12 @@ export default function Stats() {
 
 
       <img
-        src="https://github-readme-activity-graph.vercel.app/graph?username=mkr45&bg_color=ffffff&color=8f53ff&line=8f53ff&point=9b45f7&area=true&area_color=8f53ff&hide_border=true"
+        src={`https://github-readme-activity-graph.vercel.app/graph?username=mkr45&bg_color=${bgColor}&color=8f53ff&line=8f53ff&point=9b45f7&area=true&area_color=8f53ff&hide_border=true`}
         width="100%"
       />
 <div style={{marginTop: "1.5em", display: "flex", justifyContent: "center"}}>
       <img
-        src="https://github-readme-streak-stats.herokuapp.com/?user=mkr45&theme=default&hide_border=true&ring=8f53ff&fire=9b45f7&currStreakLabel=8f53ff&sideLabels=333&dates=555&background=ffffff"
+        src={`https://github-readme-streak-stats.herokuapp.com/?user=mkr45&theme=default&hide_border=true&ring=8f53ff&fire=9b45f7&currStreakLabel=8f53ff&sideLabels=${textColor}&dates=${dateColor}&background=${bgColor}&currStreakNum=${textColor}&sideNums=${textColor}`}
         width="100%"
         style={{ maxHeight: "13em"}}
       />

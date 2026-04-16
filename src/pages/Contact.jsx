@@ -50,7 +50,7 @@ const notify = () => {
           required
           id="user_name"
           autoComplete="off"
-          style={{ height: "3.5em", width: "100%" , borderRadius: "0.5em", border: "0.1em solid #ccc"}}
+          style={{ height: "3.5em", width: "100%" , borderRadius: "0.5em", border: "0.1em solid var(--border-color)", backgroundColor: "var(--bg-color)", color: "var(--text-color)"}}
         />
         <label htmlFor="user_email"
         style={{marginTop:" 1em", display: "flex"}}>
@@ -64,16 +64,16 @@ const notify = () => {
           placeholder="Where can i reach you back?"
           required
           autoComplete="off"
-          style={{height: "3.5em", width: "100%", borderRadius: "0.5em", border: "0.1em solid #ccc", }}
+          style={{height: "3.5em", width: "100%", borderRadius: "0.5em", border: "0.1em solid var(--border-color)", backgroundColor: "var(--bg-color)", color: "var(--text-color)"}}
         />
         <label htmlFor="user_message" style={{marginTop: "1em", display: "flex"}}>
           <p>Message</p>
           <p style={{color: "red"}}>*</p>
         </label>
-        <textarea name="message" placeholder="Your words, my inbox."  id="user_message" style={{height: "4em", width: "100%", borderRadius: "0.5em", border: "0.1em solid #ccc"}}/>
-        <input type="submit" value="Submit" style={{marginTop:"1em", height: "3.5em", width: "100%", borderRadius: "0.5em", border: "0.1em solid #ccc", color: "white", fontSize: "1em", marginLeft:"0.2em"}} />
+        <textarea name="message" placeholder="Your words, my inbox."  id="user_message" style={{height: "4em", width: "100%", borderRadius: "0.5em", border: "0.1em solid var(--border-color)", backgroundColor: "var(--bg-color)", color: "var(--text-color)"}}/>
+        <input type="submit" value="Submit" style={{marginTop:"1em", height: "3.5em", width: "100%", borderRadius: "0.5em", border: "0.1em solid var(--border-color)", color: "white", fontSize: "1em", marginLeft:"0.2em"}} />
         <ToastContainer />
-         <input type="reset" value="Reset" style={{marginTop:"1em", height: "3.5em", width: "100%", borderRadius: "0.5em", border: "0.1em solid #ccc", color: "black", fontSize: "1em", marginLeft:"0.2em", }}></input>
+         <input type="reset" value="Reset" style={{marginTop:"1em", height: "3.5em", width: "100%", borderRadius: "0.5em", border: "0.1em solid var(--border-color)", color: "var(--text-color)", fontSize: "1em", marginLeft:"0.2em", }}></input>
       </form>
 
        <div

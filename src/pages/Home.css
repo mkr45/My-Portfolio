@@ -1,10 +1,10 @@
 .btn-outline {
-  background-color: white;
+  background-color: var(--bg-color);
   cursor: pointer;
   transition: background-color 0.15s ease;
 }
 .btn-outline:hover {
-  background-color: rgb(240, 240, 240);
+  background-color: var(--hover-bg);
 }
 
 /* Home page styles moved from inline JSX */
@@ -19,7 +19,7 @@
 .home-subtitle {
   font-weight: 700;
   font-size: 2.2em;
-  color: oklch(55.2% .016 285.938);
+  color: var(--subtitle-color);
   margin: 0 0 0.5em 0;
 }
 .home-desc {

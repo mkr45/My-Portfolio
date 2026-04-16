@@ -32,14 +32,14 @@ export default function ProjectDetails() {
               <div
           style={{
             flex: "0 1 auto",
-            backgroundColor: "white",
+            backgroundColor: "var(--card-bg)",
             alignItems: "center",
             justifyContent: "center",
             display: "flex",
             padding: "0em 1em 0em 1em",
             borderRadius: "1em",
             height: "2em",
-            border: "1px solid rgb(226, 224, 224)",
+            border: "1px solid var(--card-border)",
             boxShadow: "0 4px 12px rgba(0,0,0,0.06)"
           }}
         >
@@ -147,8 +147,8 @@ export default function ProjectDetails() {
               width: "8em",
               height: "2.5em",
               borderRadius: "0.5em",
-              backgroundColor: "#1a1a1a",
-              color: "white",
+              backgroundColor: "var(--chip-bg)",
+              color: "var(--chip-text)",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",

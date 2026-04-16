@@ -1,5 +1,5 @@
 input::placeholder{
-  color: #999;
+  color: var(--muted-text);
   font-size: 1.2em;
   
 }
@@ -11,7 +11,7 @@ textarea {
 }
 
 textarea::placeholder {
-  color: #999;
+  color: var(--muted-text);
   font-size: 1em;
   font-style: inherit;
 }
@@ -41,11 +41,11 @@ input[type="submit"]:hover{
 }
 
 input[type="reset"] {
-  background-color: white;
+  background-color: var(--bg-color);
   transition: background-color 0.1s;
   cursor: pointer;
 }
 
 input[type="reset"]:hover{
-  background-color: #f2f1f2;
+  background-color: var(--secondary-bg);
 }

@@ -6,7 +6,7 @@
 .home-subtitle {
   font-weight: 700;
   font-size: 2.2em;
-  color: oklch(55.2% .016 285.938);
+  color: var(--subtitle-color);
   margin: 0 0 0.5em 0;
 }
 .home-desc {

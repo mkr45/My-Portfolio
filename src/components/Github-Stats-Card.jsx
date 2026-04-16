@@ -8,14 +8,14 @@ export default function GithubStatsCard({heading, subHeading}){
         <>
           {heading !== "Hireable" && (
             <div className="github-stats-box">
-              <p style={{fontSize: "1em", fontWeight: "bold", color: "oklch(55.2% .016 285.938)"}}>{heading}</p>
+              <p style={{fontSize: "1em", fontWeight: "bold", color: "var(--stats-heading)"}}>{heading}</p>
               <p style={{fontSize: "3em", fontWeight: "bold"}}>{subHeading}</p>
             </div>
           )}
 
           {heading === "Hireable" && (
-            <div className="github-stats-box" style={{backgroundColor: "oklch(0.93 0.06 152.3)"}}>
-              <p style={{fontSize: "1em", fontWeight: "bold", color: "oklch(55.2% .016 285.938)"}}>{heading}</p>
+            <div className="github-stats-box" style={{backgroundColor: "var(--hireable-bg)"}}>
+              <p style={{fontSize: "1em", fontWeight: "bold", color: "var(--stats-heading)"}}>{heading}</p>
               <p style={{fontSize: "3em", fontWeight: "bold"}}>{subHeading}</p>
             </div>
           )}

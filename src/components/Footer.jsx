@@ -5,15 +5,15 @@ export default function Footer() {
     <>
       <footer className="footer">
         <div>
-          <span style={{ color: "rgba(0, 0, 0, 0.5)" }}>
+          <span className="grey">
             ©2026 · Built with
           </span>{" "}
           React.js{" "}
-          <span style={{ color: "rgba(0, 0, 0, 0.5)" }}>and deployed with</span>{" "}
+          <span className="grey">and deployed with</span>{" "}
           Vercel
         </div>
         <div>
-          <span style={{ color: "rgba(0, 0, 0, 0.5)" }}>Developed by</span>{" "}
+          <span className="grey">Developed by</span>{" "}
           <span style={{ color: "#8f53ff" }}>Mayank</span>
         </div>
       </footer>

@@ -1,12 +1,15 @@
 .nav {
   max-width: 100%;
-  background-color: #ffffff;
+  background-color: var(--nav-bg);
+  backdrop-filter: var(--nav-blur);
+  -webkit-backdrop-filter: var(--nav-blur);
+  color: var(--text-color);
   height: 8vh;
   display: flex;
   flex-direction: row;
   padding-left: 2em;
   padding-right: 2em;
-  border: 0.1px solid hsl(0, 22%, 90%);
+  border-bottom: 0.1px solid var(--border-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +23,6 @@
   flex-direction: row;
   align-items: center;
   width: 40%;
-  background-color: #ffffff;
 }
 
 /* RIGHT SIDE */
@@ -37,7 +39,7 @@
   font-weight: bold;
   width: 8em;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 
 .nav-links {
@@ -49,16 +51,11 @@
 /* INDIVIDUAL LINKS */
 .home {
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
   padding: 0.35em 0.6em;
   border-radius: 0.5em;
   display: flex;
   align-items: center;
-  transition: background-color 0.2s ease;
-}
-
-.home:hover {
-  background-color: #f2f2f2;
 }
 
 /* ICONS */
@@ -72,8 +69,8 @@
 .time {
   width: 5em;
   height: 1.5em;
-  background-color: #fafafa;
-  border: 0.1px solid #c4c3c3;
+  background-color: var(--time-bg);
+  border: 0.1px solid var(--border-color);
   display: flex;
   border-radius: 3em;
   align-items: center;
@@ -86,7 +83,7 @@
 }
 
 .time-text {
-  color: black;
+  color: var(--text-color);
   margin-left: 0.4em;
   font-size: 0.9em;
 }

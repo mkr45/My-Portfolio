@@ -1,5 +1,6 @@
 .nav-btn{
-    background-color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     min-height: 2.5em;
     min-width: 5em; 
     border-radius: 0.4em;
@@ -14,5 +15,5 @@
 }
 
 .nav-btn:hover{
-  background-color: rgb(240, 240, 240);
+  background-color: var(--hover-bg);
 }

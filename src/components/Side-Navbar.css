@@ -10,7 +10,7 @@
   align-self: flex-start;
   height: calc(100vh - 8vh);
 
-  border-right: 0.1px solid hsl(0, 22%, 90%);
+  border-right: 0.1px solid var(--border-color);
   padding-left: 2rem;
   padding-top: 1.5em;
 }
@@ -33,7 +33,7 @@
 /* link */
 .nav-button {
   text-decoration: none;
-  color: oklch(42.571% 0.00822 285.966);
+  color: var(--nav-link-color);
 
   height: 2em;
   width: 100%;
@@ -53,6 +53,6 @@
 
 /* hover */
 .nav-button:hover {
-  color: black;
-  background-color: rgb(240, 240, 240);
+  color: var(--text-color);
+  background-color: var(--hover-bg);
 }
