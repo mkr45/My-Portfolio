@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="nav-start">
         <Link to="/">
          <img
-          src={ isDarkMode ? "https://img.icons8.com/forma-regular-filled/24/FFFFFF/happy-skull.png" : "https://img.icons8.com/?size=100&id=gpEXladfxpZd&format=png&color=1A1A1A"}
+          src={ isDarkMode ? "https://img.icons8.com/forma-regular-filled/24/FFFFFF/happy-skull.png" : "https://img.icons8.com/forma-light-filled/24/1A1A1A/happy-skull.png"}
           alt="logo"
           className="icon-home"
         />
