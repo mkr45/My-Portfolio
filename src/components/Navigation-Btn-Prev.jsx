@@ -9,8 +9,8 @@ export default function NavigationBtnPrev(props)
     <>
     <button className="nav-btn">
     <img
-         src={isDarkMode ? "https://img.icons8.com/?size=100&id=mN0cPZctq65n&format=png&color=FFFFFF" : "https://img.icons8.com/?size=100&id=mN0cPZctq65n&format=png&color=1A1A1A"}
-         alt="next"
+         src={isDarkMode ? "https://img.icons8.com/sf-black-filled/64/FFFFFF/back.png" : "https://img.icons8.com/sf-black-filled/64/1A1A1A/back.png"}
+         alt="previous"
          style={{height:"1.5em", width: "1.5em"}}
       />
       {props.text}

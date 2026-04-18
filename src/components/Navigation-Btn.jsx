@@ -9,9 +9,9 @@ export default function NavigationBtn(props) {
       <button className="nav-btn">
         {props.text}
         <img
-          src={isDarkMode ? "https://img.icons8.com/ios-filled/50/FFFFFF/forward--v1.png" : "https://img.icons8.com/?size=100&id=60&format=png&color=1A1A1A"}
+          src={isDarkMode ? "https://img.icons8.com/sf-black-filled/64/FFFFFF/forward.png" : "https://img.icons8.com/sf-black-filled/64/1A1A1A/forward.png"}
           alt="next"
-          style={{ height: "1em", width: "1em" }}
+          style={{ height: "1.5em", width: "1.5em" }}
         />
       </button>
     </>
