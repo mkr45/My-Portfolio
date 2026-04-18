@@ -15,6 +15,19 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  animation: slideDown 0.5s ease-out;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* LEFT SIDE */
@@ -40,6 +53,28 @@
   width: 8em;
   text-decoration: none;
   color: var(--text-color);
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.name::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #8f53ff, #9b45f7);
+  transition: width 0.3s ease;
+}
+
+.name:hover {
+  color: #8f53ff;
+  transform: translateX(2px);
+}
+
+.name:hover::after {
+  width: 100%;
 }
 
 .nav-links {
@@ -56,6 +91,14 @@
   border-radius: 0.5em;
   display: flex;
   align-items: center;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.home:hover {
+  background-color: var(--hover-bg);
+  color: #8f53ff;
+  transform: translateY(-2px);
 }
 
 /* ICONS */
@@ -63,6 +106,27 @@
   height: 1.2em;
   width: 1.2em;
   cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: fadeInIcon 0.6s ease-out backwards;
+}
+
+.icon:hover {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.icon:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeInIcon {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* TIME BOX */
@@ -75,6 +139,14 @@
   border-radius: 3em;
   align-items: center;
   padding: 0 0.5em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  animation: fadeInIcon 0.8s ease-out backwards;
+}
+
+.time:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(143, 83, 255, 0.2);
+  border-color: #8f53ff;
 }
 
 .green-icon {
@@ -91,10 +163,30 @@
   height: 2em;
   width: 2em;
   cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: fadeInIcon 0.5s ease-out backwards;
+}
+
+.icon-home:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.icon-home:active {
+  transform: scale(0.95);
 }
 
 .icon-github{
    height: 1.5em;
   width: 1.5em;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: fadeInIcon 0.9s ease-out backwards;
+}
+
+.icon-github:hover {
+  transform: scale(1.15) rotate(360deg);
+}
+
+.icon-github:active {
+  transform: scale(0.9);
 }

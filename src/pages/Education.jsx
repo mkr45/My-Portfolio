@@ -14,16 +14,19 @@ export default function Education() {
       />
 
       <ExperienceCard
+        type="education"
         job="Bachelor of engineering - Chandigarh university, Mohali, Punjab, India"
         date="May 2021 - May 2025"
         experience=" Completed bachelor of engineering in computer science and engineering."
       />
       <ExperienceCard
+        type="education"
         job="Higher Secondary Education - DAV Public School, B.S City, Jharkhand, India"
         date="April 2020 - April 2021"
         experience="Completed 12th in Non-medical."
       />
       <ExperienceCard
+        type="education"
         job="Secondary Education - DAV Public School, B.S City, Jharkhand, India"
         date="April 2018 - April 2019"
         experience="Completed 10th grade."
