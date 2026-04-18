@@ -152,6 +152,7 @@
 .green-icon {
   height: 1em;
   width: 3em;
+  padding-bottom: 0.3em;
 }
 
 .time-text {
@@ -176,11 +177,13 @@
 }
 
 .icon-github{
-   height: 1.5em;
+  height: 1.5em;
   width: 1.5em;
   cursor: pointer;
   transition: transform 0.3s ease;
   animation: fadeInIcon 0.9s ease-out backwards;
+  padding-top: 0.4em ;
+
 }
 
 .icon-github:hover {
