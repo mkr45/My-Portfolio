@@ -9,89 +9,130 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom";
 
 export default function Contact() {
-const notify = () => {
+  const notify = () => {
     toast.success("Message sent successfully", {
       position: "top-right"
     });
   };
+
+  const notifyError = () => {
+    toast.error("Something went wrong. Please try again.", {
+      position: "top-right"
+    });
+  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-  emailjs
-  .sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
-    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-  })
-  .then(() => {
-    notify();
-  })
-  .catch((error) => {
-   throw error;
-  });
+    emailjs
+      .sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      })
+      .then(() => {
+        notify();
+        form.current?.reset();
+      })
+      .catch(() => {
+        notifyError();
+      });
   };
+
   return (
     <>
       <PageHeader
         title="Contact"
-        subtitle="Let’s connect before I dive into the next bug fix!"
-        description=""
+        subtitle="Let’s talk about ideas, builds, or the next role."
+        description="If you want to collaborate, discuss a project, or just reach out, this page should feel as polished and easy as the rest of the site."
       />
 
-      <form ref={form} onSubmit={sendEmail} style={{display: "flex", flexDirection: "column", width: "90%",}}>
-        <label htmlFor="user_name" style={{display: "flex"}}>
-          <p>Name</p>
-          <p style={{color: "red"}}>*</p>
-        </label>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your name, your fame"
-          required
-          id="user_name"
-          autoComplete="off"
-          style={{ height: "3.5em", width: "100%" , borderRadius: "0.5em", border: "0.1em solid var(--border-color)", backgroundColor: "var(--bg-color)", color: "var(--text-color)"}}
-        />
-        <label htmlFor="user_email"
-        style={{marginTop:" 1em", display: "flex"}}>
-          <p>Email</p>
-          <p style={{color: "red"}}>*</p>
-        </label>
-        <input
-          type="email"
-          name="Email"
-          id="user_email"
-          placeholder="Where can i reach you back?"
-          required
-          autoComplete="off"
-          style={{height: "3.5em", width: "100%", borderRadius: "0.5em", border: "0.1em solid var(--border-color)", backgroundColor: "var(--bg-color)", color: "var(--text-color)"}}
-        />
-        <label htmlFor="user_message" style={{marginTop: "1em", display: "flex"}}>
-          <p>Message</p>
-          <p style={{color: "red"}}>*</p>
-        </label>
-        <textarea name="message" placeholder="Your words, my inbox."  id="user_message" style={{height: "4em", width: "100%", borderRadius: "0.5em", border: "0.1em solid var(--border-color)", backgroundColor: "var(--bg-color)", color: "var(--text-color)"}}/>
-        <input type="submit" value="Submit" style={{marginTop:"1em", height: "3.5em", width: "100%", borderRadius: "0.5em", border: "0.1em solid var(--border-color)", color: "white", fontSize: "1em", marginLeft:"0.2em"}} />
-        <ToastContainer />
-         <input type="reset" value="Reset" style={{marginTop:"1em", height: "3.5em", width: "100%", borderRadius: "0.5em", border: "0.1em solid var(--border-color)", color: "var(--text-color)", fontSize: "1em", marginLeft:"0.2em", }}></input>
-      </form>
+      <section className="contact-shell">
+        <article className="contact-panel contact-panel-intro">
+          <span className="contact-kicker">Reach out</span>
+          <h3>Open to product conversations, collaborations, and opportunities</h3>
+          <p>
+            Whether it’s a project idea, a frontend role, or a chance to build
+            something meaningful, I’d love to hear what you’re working on.
+          </p>
 
-       <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                paddingTop: "2em",
-                width: "100%",
-              }}
-            >
-              <Link to="/education" style={{ textDecoration: "none" }}>
-                <NavigationBtnPrev text="Education" />
-              </Link>
-              <Link to="/stats" style={{ textDecoration: "none" }}>
-                <NavigationBtn text="Stats" />
-              </Link>
+          <div className="contact-points">
+            <div className="contact-point">
+              <strong>Email</strong>
+              <span>mayankkr4554@gmail.com</span>
             </div>
+            <div className="contact-point">
+              <strong>Location</strong>
+              <span>Pune, Maharashtra, India</span>
+            </div>
+            <div className="contact-point">
+              <strong>Best for</strong>
+              <span>Frontend roles, product work, and collaborative builds</span>
+            </div>
+          </div>
+        </article>
+
+        <form ref={form} onSubmit={sendEmail} className="contact-panel contact-form">
+          <div className="field-group">
+            <label htmlFor="user_name" className="contact-label">
+              Name <span>*</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+              id="user_name"
+              autoComplete="off"
+              className="contact-input"
+            />
+          </div>
+
+          <div className="field-group">
+            <label htmlFor="user_email" className="contact-label">
+              Email <span>*</span>
+            </label>
+            <input
+              type="email"
+              name="Email"
+              id="user_email"
+              placeholder="Where should I reply?"
+              required
+              autoComplete="off"
+              className="contact-input"
+            />
+          </div>
+
+          <div className="field-group">
+            <label htmlFor="user_message" className="contact-label">
+              Message <span>*</span>
+            </label>
+            <textarea
+              name="message"
+              placeholder="Tell me a little about what you have in mind."
+              id="user_message"
+              required
+              className="contact-textarea"
+            />
+          </div>
+
+          <div className="contact-actions">
+            <input type="submit" value="Send message" className="contact-submit" />
+            <input type="reset" value="Clear form" className="contact-reset" />
+          </div>
+        </form>
+      </section>
+
+      <ToastContainer />
+
+      <div className="contact-nav">
+        <Link to="/education" style={{ textDecoration: "none" }}>
+          <NavigationBtnPrev text="Education" />
+        </Link>
+        <Link to="/stats" style={{ textDecoration: "none" }}>
+          <NavigationBtn text="Stats" />
+        </Link>
+      </div>
     </>
   );
 }

@@ -77,17 +77,17 @@ export default function Home() {
         </div>
 
         <div className="hero-visual">
-          <div className="visual-orb visual-orb-a" />
-          <div className="visual-orb visual-orb-b" />
-          <div className="visual-card visual-card-main">
-            <span className="visual-kicker">Current focus</span>
-            <strong>React interfaces</strong>
-            <p>Design-forward components with strong UX polish.</p>
-          </div>
-          <div className="visual-card visual-card-secondary">
-            <span className="visual-kicker">Also building</span>
-            <strong>APIs and product flows</strong>
-            <p>Reliable backend wiring behind smooth frontends.</p>
+          <div className="visual-stack">
+            <div className="visual-card visual-card-main">
+              <span className="visual-kicker">Current focus</span>
+              <strong>React interfaces</strong>
+              <p>Design-forward components with strong UX polish.</p>
+            </div>
+            <div className="visual-card visual-card-secondary">
+              <span className="visual-kicker">Also building</span>
+              <strong>APIs and product flows</strong>
+              <p>Reliable backend wiring behind smooth frontends.</p>
+            </div>
           </div>
         </div>
       </section>
