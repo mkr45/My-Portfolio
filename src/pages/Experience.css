@@ -1,0 +1,110 @@
+.experience-overview,
+.experience-timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-overview {
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  margin-bottom: 1.25rem;
+}
+
+.experience-panel {
+  border-radius: 1.6rem;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  padding: 1.4rem;
+}
+
+.experience-panel.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-panel.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -3rem -4rem auto;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(143, 83, 255, 0.16), transparent 70%);
+}
+
+.experience-kicker {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(143, 83, 255, 0.1);
+  color: #8f53ff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience-panel h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.25rem;
+}
+
+.experience-panel p {
+  margin: 0;
+  color: var(--muted-text);
+  line-height: 1.65;
+}
+
+.experience-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.experience-stat {
+  padding: 1rem;
+  border-radius: 1.2rem;
+  background: var(--secondary-bg);
+  border: 1px solid var(--card-border);
+}
+
+.experience-stat strong,
+.experience-stat span {
+  display: block;
+}
+
+.experience-stat strong {
+  font-size: 1.02rem;
+  margin-bottom: 0.35rem;
+}
+
+.experience-stat span {
+  color: var(--muted-text);
+  line-height: 1.5;
+  font-size: 0.92rem;
+}
+
+.experience-timeline {
+  margin-top: 0.5rem;
+}
+
+.experience-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2em;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .experience-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience-stat-grid {
+    grid-template-columns: 1fr;
+  }
+}

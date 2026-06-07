@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -29,6 +29,7 @@ body {
   min-width: 0;
   padding: 2rem;
   animation: slideUp 0.6s ease-out;
+  max-width: 78rem;
 }
 
 .page-inner {
@@ -106,4 +107,8 @@ body {
   --subtitle-color: oklch(55.2% .016 285.938);
   --stats-heading: oklch(55.2% .016 285.938);
   --hireable-bg: oklch(0.93 0.06 152.3);
+  --card-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 22px 42px rgba(143, 83, 255, 0.14);
+  --card-radius-lg: 1.6rem;
+  --card-radius-md: 1.2rem;
 }

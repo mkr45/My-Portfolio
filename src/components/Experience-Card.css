@@ -1,18 +1,146 @@
+.experience-item {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+  align-items: stretch;
+}
+
+.experience-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-icon-shell {
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, rgba(143, 83, 255, 0.14), rgba(255, 153, 102, 0.14));
+  border: 1px solid rgba(143, 83, 255, 0.2);
+  box-shadow: 0 10px 24px rgba(143, 83, 255, 0.12);
+}
+
+.experience-icon {
+  width: 1.45rem;
+  height: 1.45rem;
+  filter: drop-shadow(0 2px 4px rgba(143, 83, 255, 0.25));
+}
+
+.experience-line {
+  width: 2px;
+  flex: 1;
+  margin-top: 0.6rem;
+  background: linear-gradient(180deg, #8f53ff 0%, rgba(143, 83, 255, 0.08) 100%);
+}
+
+.experience-item:last-child .experience-line {
+  opacity: 0.2;
+}
+
 .card-box{
-    display: flex;
-    flex-direction: column;
-    animation: fadeInCard 0.6s ease-out backwards;
-    transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  padding: 1.35rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+  animation: fadeInCard 0.6s ease-out backwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .card-box:hover {
-    transform: translateX(8px);
+  transform: translateY(-4px);
+  box-shadow: 0 22px 40px rgba(143, 83, 255, 0.14);
+  border-color: rgba(143, 83, 255, 0.28);
 }
 
-.card-box:nth-child(1) { animation-delay: 0.1s; }
-.card-box:nth-child(2) { animation-delay: 0.2s; }
-.card-box:nth-child(3) { animation-delay: 0.3s; }
-.card-box:nth-child(4) { animation-delay: 0.4s; }
+.experience-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.experience-badge {
+  width: fit-content;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(143, 83, 255, 0.1);
+  color: #8f53ff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience-date {
+  color: var(--muted-text);
+  font-size: 0.92rem;
+}
+
+.experience-job {
+  font-size: 1.28rem;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--text-color), #8f53ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.experience-summary {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.experience-copy {
+  color: var(--muted-text);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.experience-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.experience-highlight-pill {
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  background: var(--secondary-bg);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-rail {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .experience-line {
+    height: 2px;
+    width: 100%;
+    margin-top: 0;
+    background: linear-gradient(90deg, #8f53ff 0%, rgba(143, 83, 255, 0.08) 100%);
+  }
+}
 
 @keyframes fadeInCard {
   from {

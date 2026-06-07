@@ -1,0 +1,16 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 26rem));
+  gap: 1.25rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  justify-content: start;
+}
+
+.projects-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2em;
+  width: 100%;
+}

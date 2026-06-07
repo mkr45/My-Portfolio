@@ -11,31 +11,13 @@ export default function Projects() {
     <>
       <PageHeader
         title="Projects"
-        subtitle="Building ideas, one commit at a time!"
-        description=""
+        subtitle="Selected builds with product feel and engineering depth."
+        description="A tighter look at the work: cleaner cards, faster scanning, and the most important details up front."
       />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          gap: "2em",
-          width: "100%",
-          height: "100%",
-          marginBottom: "1em",
-        }}
-      >
+      <div className="projects-grid">
         <ProjectCard projects={projectsData} />
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          paddingTop: "2em",
-          width: "100%",
-        }}
-      >
+      <div className="projects-nav">
         <Link to="/about" style={{ textDecoration: "none" }}>
           <NavigationBtnPrev text="About" />
         </Link>

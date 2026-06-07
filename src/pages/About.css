@@ -1,19 +1,108 @@
-.home-title {
-  font-weight: 700;
-  font-size: 2.2em;
-  margin: 0 0 0.25em 0;
+.about-grid,
+.principles-grid {
+  display: grid;
+  gap: 1rem;
 }
-.home-subtitle {
-  font-weight: 700;
-  font-size: 2.2em;
-  color: var(--subtitle-color);
-  margin: 0 0 0.5em 0;
+
+.about-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
 }
-.home-desc {
+
+.principles-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.about-spotlight,
+.about-card {
+  border-radius: 1.6rem;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+
+.about-spotlight {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 1.2rem;
+  padding: 1.4rem;
+  align-items: center;
+}
+
+.about-avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1.6rem;
+  background: linear-gradient(145deg, #8f53ff, #ff9966);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.about-label {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #8f53ff;
+}
+
+.about-spotlight h3,
+.principle-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.2rem;
+}
+
+.about-spotlight p,
+.principle-card p {
+  margin: 0;
+  color: var(--muted-text);
   line-height: 1.6;
-  font-size: 1.125rem;
-  font-weight: 400;
-  margin: 0 0 1rem 0;
-  animation: fadeIn 0.8s ease-out 0.3s backwards;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.about-card {
+  padding: 1.4rem;
+}
+
+.strength-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.strength-pill {
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  background: var(--secondary-bg);
+  border: 1px solid var(--card-border);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.principle-card {
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.principle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(143, 83, 255, 0.14);
+}
+
+@media (max-width: 960px) {
+  .about-grid,
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-spotlight {
+    grid-template-columns: 1fr;
+  }
 }

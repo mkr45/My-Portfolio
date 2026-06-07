@@ -1,17 +1,21 @@
 .github-stats-box{
-    display: flex;
-    flex-direction: column;
-    gap: 0.3em;
-    width: 20em;
-    height: 12em;
-    border: 1px solid var(--card-border);
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
-    padding: 0.8em 1em;
-    word-wrap: break-word;
-    overflow: hidden;
-    animation: scaleIn 0.5s ease-out backwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 12rem;
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius-lg);
+  box-shadow: var(--card-shadow);
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+  padding: 1.2rem;
+  word-wrap: break-word;
+  overflow: hidden;
+  animation: scaleIn 0.5s ease-out backwards;
+  background:
+    radial-gradient(circle at top right, rgba(143, 83, 255, 0.08), transparent 35%),
+    var(--card-bg);
+  position: relative;
 }
 
 .github-stats-box:nth-child(1) { animation-delay: 0.1s; }
@@ -20,14 +24,53 @@
 .github-stats-box:nth-child(4) { animation-delay: 0.4s; }
 .github-stats-box:nth-child(5) { animation-delay: 0.5s; }
 
-.github-stats-box p{
-    margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.github-stats-box::after {
+  content: "";
+  position: absolute;
+  inset: auto -2rem -2rem auto;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 999px;
+  background: rgba(143, 83, 255, 0.08);
 }
+
+.github-stats-label,
+.github-stats-value,
+.github-stats-foot {
+  position: relative;
+  z-index: 1;
+}
+
+.github-stats-label{
+  margin: 0;
+  color: var(--stats-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.github-stats-value{
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  font-weight: 800;
+}
+
+.github-stats-foot {
+  color: var(--muted-text);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
 .github-stats-box:hover{
-    transform: translateY(-0.5rem) scale(1.02);
-    box-shadow: 0 1rem 2rem rgba(143, 83, 255, 0.12);
-    border-color: rgba(143, 83, 255, 0.2);
+  transform: translateY(-0.45rem);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(143, 83, 255, 0.2);
+}
+
+.github-stats-box-hireable {
+  background:
+    radial-gradient(circle at top right, rgba(53, 166, 102, 0.14), transparent 35%),
+    var(--hireable-bg);
 }

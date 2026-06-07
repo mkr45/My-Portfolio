@@ -2,7 +2,12 @@ export const projectsData = [
   {
     id: 1,
     heading: "Portfolio",
-    desc: "A dynamic portfolio showcasing my projects, skills, and contributions using the latest web technologies.",
+    desc: "A multi-page developer portfolio redesigned with richer cards, dynamic routing, theme switching, contact flows, and a more polished front-end presentation.",
+    category: "Personal brand",
+    badge: "Featured",
+    duration: "9 routes",
+    highlight: "Visual redesign",
+    visualLabel: "Portfolio UI",
     features: [
       "Features",
       "Seamless client-side navigation across 9 pages with dynamic routing.",
