@@ -107,4 +107,10 @@
   .experience-stat-grid {
     grid-template-columns: 1fr;
   }
+
+  .experience-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
 }

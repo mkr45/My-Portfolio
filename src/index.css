@@ -19,8 +19,8 @@ body {
 
 .page {
   display: flex;
-  margin-top: 8vh; 
-  min-height: calc(100vh - 8vh);
+  margin-top: 5.5rem;
+  min-height: calc(100vh - 5.5rem);
   animation: fadeIn 0.5s ease-in;
 }
 
@@ -111,4 +111,32 @@ body {
   --card-shadow-hover: 0 22px 42px rgba(143, 83, 255, 0.14);
   --card-radius-lg: 1.6rem;
   --card-radius-md: 1.2rem;
+}
+
+@media (max-width: 1024px) {
+  .page {
+    margin-top: 8.25rem;
+    min-height: calc(100vh - 8.25rem);
+  }
+
+  .page-inner {
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+    max-width: none;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    margin-top: 7.5rem;
+    min-height: calc(100vh - 7.5rem);
+  }
+
+  .content {
+    padding: 1rem;
+  }
 }

@@ -353,6 +353,19 @@
 }
 
 @media (max-width: 640px) {
+  .hero-lead {
+    font-size: 1.05rem;
+  }
+
+  .button-row {
+    gap: 0.85rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+  }
+
   .hero-copy,
   .hero-visual,
   .stat-card,
@@ -362,7 +375,7 @@
 
   .visual-card {
     width: auto;
-    margin-top: 8.5rem;
+    margin-top: 0;
   }
 
   .visual-card-secondary {
