@@ -11,18 +11,21 @@ export default function About() {
     "API integration and product delivery",
   ];
 
-  const values = [
+  const profileCards = [
     {
-      title: "Build with clarity",
-      text: "I prefer interfaces that feel obvious, fast, and intentional instead of overloaded.",
+      label: "Current role",
+      title: "Software Engineer at RSL",
+      text: "Working across frontend and backend features, shipping product improvements and solving real implementation problems.",
     },
     {
-      title: "Collaborate deeply",
-      text: "My best work happens with strong product, design, and engineering feedback loops.",
+      label: "Based in",
+      title: "Pune, Maharashtra",
+      text: "Building with an eye on product quality, cleaner interfaces, and software that feels reliable in use.",
     },
     {
-      title: "Polish the details",
-      text: "Accessibility, consistency, and performance are part of the feature, not extras.",
+      label: "Focus area",
+      title: "Frontend with full-stack range",
+      text: "Strongest in React interfaces, design systems, and product UX, with hands-on backend integration experience too.",
     },
   ];
 
@@ -60,11 +63,11 @@ export default function About() {
       </section>
 
       <section className="principles-grid">
-        {values.map((value) => (
-          <article className="about-card principle-card" key={value.title}>
-            <span className="about-label">Approach</span>
-            <h3>{value.title}</h3>
-            <p>{value.text}</p>
+        {profileCards.map((card) => (
+          <article className="about-card principle-card" key={card.title}>
+            <span className="about-label">{card.label}</span>
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
           </article>
         ))}
       </section>
