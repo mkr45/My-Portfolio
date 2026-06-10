@@ -19,22 +19,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, rgba(143, 83, 255, 0.14), rgba(255, 153, 102, 0.14));
-  border: 1px solid rgba(143, 83, 255, 0.2);
-  box-shadow: 0 10px 24px rgba(143, 83, 255, 0.12);
+  background: var(--secondary-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
 .experience-icon {
   width: 1.45rem;
   height: 1.45rem;
-  filter: drop-shadow(0 2px 4px rgba(143, 83, 255, 0.25));
+  filter: opacity(0.85);
 }
 
 .experience-line {
   width: 2px;
   flex: 1;
   margin-top: 0.6rem;
-  background: linear-gradient(180deg, #8f53ff 0%, rgba(143, 83, 255, 0.08) 100%);
+  background: linear-gradient(180deg, var(--accent-color) 0%, rgba(var(--accent-rgb), 0.08) 100%);
 }
 
 .experience-item:last-child .experience-line {
@@ -56,8 +56,8 @@
 
 .card-box:hover {
   transform: translateY(-4px);
-  box-shadow: 0 22px 40px rgba(143, 83, 255, 0.14);
-  border-color: rgba(143, 83, 255, 0.28);
+  box-shadow: 0 22px 40px rgba(var(--accent-rgb), 0.14);
+  border-color: rgba(var(--accent-rgb), 0.28);
 }
 
 .experience-topline {
@@ -72,8 +72,8 @@
   width: fit-content;
   padding: 0.45rem 0.7rem;
   border-radius: 999px;
-  background: rgba(143, 83, 255, 0.1);
-  color: #8f53ff;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -89,7 +89,7 @@
   font-size: 1.28rem;
   font-weight: 700;
   line-height: 1.2;
-  background: linear-gradient(135deg, var(--text-color), #8f53ff);
+  background: linear-gradient(135deg, var(--text-color), var(--accent-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -138,8 +138,8 @@
     height: 2px;
     width: 100%;
     margin-top: 0;
-    background: linear-gradient(90deg, #8f53ff 0%, rgba(143, 83, 255, 0.08) 100%);
-  }
+    background: linear-gradient(90deg, var(--accent-color) 0%, rgba(var(--accent-rgb), 0.08) 100%);
+}
 }
 
 @keyframes fadeInCard {

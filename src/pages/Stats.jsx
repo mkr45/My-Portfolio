@@ -48,7 +48,7 @@ export default function Stats() {
       <section className="stats-shell">
         <div className="stats-graph-card">
           <img
-            src={`https://github-readme-activity-graph.vercel.app/graph?username=mkr45&bg_color=${bgColor}&color=8f53ff&line=8f53ff&point=9b45f7&area=true&area_color=8f53ff&hide_border=true`}
+            src={`https://github-readme-activity-graph.vercel.app/graph?username=mkr45&bg_color=${bgColor}&color=5f6c62&line=5f6c62&point=7c877c&area=true&area_color=5f6c62&hide_border=true`}
             width="100%"
             alt="GitHub activity graph"
           />
@@ -56,7 +56,7 @@ export default function Stats() {
 
         <div className="stats-streak-card">
           <img
-            src={`https://github-readme-streak-stats.herokuapp.com/?user=mkr45&theme=default&hide_border=true&ring=8f53ff&fire=9b45f7&currStreakLabel=8f53ff&sideLabels=${textColor}&dates=${dateColor}&background=${bgColor}&currStreakNum=${textColor}&sideNums=${textColor}`}
+            src={`https://github-readme-streak-stats.herokuapp.com/?user=mkr45&theme=default&hide_border=true&ring=5f6c62&fire=7c877c&currStreakLabel=5f6c62&sideLabels=${textColor}&dates=${dateColor}&background=${bgColor}&currStreakNum=${textColor}&sideNums=${textColor}`}
             width="100%"
             style={{ maxHeight: "13em"}}
             alt="GitHub streak stats"

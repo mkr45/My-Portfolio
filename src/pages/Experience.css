@@ -29,7 +29,7 @@
   width: 12rem;
   height: 12rem;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(143, 83, 255, 0.16), transparent 70%);
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.14), transparent 70%);
 }
 
 .experience-kicker {
@@ -37,8 +37,8 @@
   margin-bottom: 0.6rem;
   padding: 0.45rem 0.75rem;
   border-radius: 999px;
-  background: rgba(143, 83, 255, 0.1);
-  color: #8f53ff;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.08em;

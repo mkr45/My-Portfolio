@@ -30,9 +30,9 @@
 
 .nav-btn:hover{
   background-color: var(--hover-bg);
-  border-color: rgba(143, 83, 255, 0.5);
+  border-color: rgba(var(--accent-rgb), 0.5);
   transform: translateX(4px);
-  box-shadow: 0 6px 16px rgba(143, 83, 255, 0.15);
+  box-shadow: 0 6px 16px rgba(var(--accent-rgb), 0.15);
 }
 
 .nav-btn:active {

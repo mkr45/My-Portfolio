@@ -15,7 +15,7 @@
   flex-direction: row;
   min-width: 4em;
   background:
-    linear-gradient(180deg, rgba(143, 83, 255, 0.06), rgba(143, 83, 255, 0)),
+    linear-gradient(180deg, rgba(var(--accent-rgb), 0.06), rgba(var(--accent-rgb), 0)),
     var(--card-bg);
   min-height: 2.6rem;
   align-items: center;
@@ -51,8 +51,8 @@
 
 .chip:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(143, 83, 255, 0.12);
-  border-color: rgba(143, 83, 255, 0.28);
+  box-shadow: 0 10px 20px rgba(var(--accent-rgb), 0.12);
+  border-color: rgba(var(--accent-rgb), 0.28);
 }
 
 

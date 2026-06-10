@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         <div>
           <span className="grey">Developed by</span>{" "}
-          <span style={{ color: "#8f53ff" }}>Mayank</span>
+          <span style={{ color: "var(--accent-strong)" }}>Mayank</span>
         </div>
       </footer>
     </>

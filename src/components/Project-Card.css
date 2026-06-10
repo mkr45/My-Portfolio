@@ -21,8 +21,8 @@
 
 .box:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 1.4rem 3rem rgba(143, 83, 255, 0.16);
-  border-color: rgba(143, 83, 255, 0.28);
+  box-shadow: 0 1.4rem 3rem rgba(var(--accent-rgb), 0.16);
+  border-color: rgba(var(--accent-rgb), 0.28);
 }
 
 .project-cover {
@@ -36,15 +36,15 @@
 }
 
 .project-cover-1 {
-  background: linear-gradient(145deg, #111827, #4c1d95 65%, #8f53ff);
+  background: linear-gradient(145deg, #1f241f, #364036 70%, #4f5c4f);
 }
 
 .project-cover-2 {
-  background: linear-gradient(145deg, #052e2b, #0f766e 55%, #56c9ff);
+  background: linear-gradient(145deg, #24211e, #4b4239 60%, #6d6358);
 }
 
 .project-cover-3 {
-  background: linear-gradient(145deg, #3f1d12, #c2410c 55%, #fbbf24);
+  background: linear-gradient(145deg, #202225, #36414a 55%, #5b6870);
 }
 
 .project-cover::after {
@@ -114,8 +114,8 @@
   flex-shrink: 0;
   padding: 0.4rem 0.65rem;
   border-radius: 999px;
-  background: rgba(143, 83, 255, 0.1);
-  color: #8f53ff;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
   font-size: 0.75rem;
   font-weight: 700;
 }
@@ -163,5 +163,5 @@
 .project-cta {
   margin-top: 0.2rem;
   font-weight: 700;
-  color: #8f53ff;
+  color: var(--accent-strong);
 }

@@ -68,12 +68,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #8f53ff, #9b45f7);
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-strong));
   transition: width 0.3s ease;
 }
 
 .name:hover {
-  color: #8f53ff;
+  color: var(--accent-strong);
   transform: translateX(2px);
 }
 
@@ -103,7 +103,7 @@
 
 .home:hover {
   background-color: var(--hover-bg);
-  color: #8f53ff;
+  color: var(--accent-strong);
   transform: translateY(-2px);
 }
 
@@ -151,8 +151,8 @@
 
 .time:hover {
   transform: scale(1.05);
-  box-shadow: 0 2px 8px rgba(143, 83, 255, 0.2);
-  border-color: #8f53ff;
+  box-shadow: 0 2px 8px rgba(var(--accent-rgb), 0.2);
+  border-color: var(--accent-color);
 }
 
 .green-icon {

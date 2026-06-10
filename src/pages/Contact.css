@@ -9,7 +9,7 @@
   border: 1px solid var(--card-border);
   border-radius: var(--card-radius-lg);
   background:
-    radial-gradient(circle at top right, rgba(143, 83, 255, 0.08), transparent 35%),
+    radial-gradient(circle at top right, rgba(var(--accent-rgb), 0.08), transparent 35%),
     var(--card-bg);
   box-shadow: var(--card-shadow);
   padding: 1.45rem;
@@ -29,7 +29,7 @@
   width: 10rem;
   height: 10rem;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(143, 83, 255, 0.14), transparent 70%);
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.14), transparent 70%);
 }
 
 .contact-kicker {
@@ -37,8 +37,8 @@
   margin-bottom: 0.7rem;
   padding: 0.45rem 0.75rem;
   border-radius: 999px;
-  background: rgba(143, 83, 255, 0.1);
-  color: #8f53ff;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -146,8 +146,8 @@
 .contact-input:focus,
 .contact-textarea:focus {
   outline: none;
-  border-color: rgba(143, 83, 255, 0.42);
-  box-shadow: 0 0 0 4px rgba(143, 83, 255, 0.1);
+  border-color: rgba(var(--accent-rgb), 0.42);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.1);
 }
 
 .contact-actions {
@@ -170,15 +170,15 @@
 }
 
 .contact-submit {
-  background: #8f53ff;
+  background: var(--accent-strong);
   color: white;
-  box-shadow: 0 12px 22px rgba(143, 83, 255, 0.22);
+  box-shadow: 0 12px 22px rgba(var(--accent-rgb), 0.22);
 }
 
 .contact-submit:hover {
   transform: translateY(-2px);
-  background: #9b45f7;
-  box-shadow: 0 16px 28px rgba(143, 83, 255, 0.28);
+  background: var(--accent-color);
+  box-shadow: 0 16px 28px rgba(var(--accent-rgb), 0.28);
 }
 
 .contact-reset {
@@ -189,7 +189,7 @@
 .contact-reset:hover {
   transform: translateY(-2px);
   background: var(--secondary-bg);
-  border-color: rgba(143, 83, 255, 0.22);
+  border-color: rgba(var(--accent-rgb), 0.22);
 }
 
 .contact-nav {

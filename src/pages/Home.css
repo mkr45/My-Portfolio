@@ -21,7 +21,7 @@
   font-weight: 700;
   font-size: 2.5rem;
   margin: 0 0 0.25em 0;
-  background: linear-gradient(135deg, var(--text-color) 0%, #8f53ff 100%);
+  background: linear-gradient(135deg, var(--text-color) 0%, var(--accent-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -44,7 +44,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #8f53ff, #9b45f7, transparent);
+  background: linear-gradient(90deg, var(--accent-color), transparent);
   animation: expandWidth 1s ease-out 0.5s backwards;
 }
 .home-desc {
@@ -91,15 +91,15 @@
   width: 18rem;
   height: 18rem;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(143, 83, 255, 0.16), transparent 70%);
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.12), transparent 70%);
 }
 
 .hero-pill {
   width: fit-content;
   padding: 0.55rem 0.95rem;
   border-radius: 999px;
-  background: rgba(143, 83, 255, 0.12);
-  color: #8f53ff;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -128,20 +128,20 @@
   min-width: 9.5em;
   height: 2.9em;
   border-radius: 999px;
-  background-color: oklch(60.6% .25 292.717);
+  background-color: var(--accent-strong);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   animation: scaleIn 0.5s ease-out 0.5s backwards, pulse 2s ease-in-out 2s infinite;
-  box-shadow: 0 4px 15px rgba(143, 83, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.28);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(143, 83, 255, 0.5);
-  background-color: #9b45f7;
+  box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.38);
+  background-color: var(--accent-color);
 }
 
 .btn-primary:active {
@@ -150,10 +150,10 @@
 
 @keyframes pulse {
   0%, 100% {
-    box-shadow: 0 4px 15px rgba(143, 83, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.28);
   }
   50% {
-    box-shadow: 0 4px 25px rgba(143, 83, 255, 0.5);
+    box-shadow: 0 4px 25px rgba(var(--accent-rgb), 0.38);
   }
 }
 .btn-primary a { text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 0.35em }
@@ -178,8 +178,9 @@
   padding: 1.5rem;
   overflow: hidden;
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 30%),
-    linear-gradient(160deg, #111827, #24123a 55%, #8f53ff);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(var(--accent-rgb), 0.24), transparent 32%),
+    linear-gradient(160deg, var(--hero-surface-start), var(--hero-surface-end));
   color: #fff;
   animation: scaleIn 0.8s ease-out 0.2s backwards;
   display: flex;
@@ -212,14 +213,14 @@
 .visual-card {
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 248, 239, 0.08);
   backdrop-filter: blur(14px);
   border-radius: 1.35rem;
   padding: 1rem 1.1rem;
   width: 100%;
   box-sizing: border-box;
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease, background 0.24s ease;
-  box-shadow: 0 16px 28px rgba(16, 12, 30, 0.18);
+  box-shadow: 0 18px 36px rgba(6, 4, 4, 0.26);
   z-index: 1;
   flex: 1;
   justify-content: center;
@@ -247,9 +248,9 @@
 
 .visual-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 36px rgba(10, 8, 24, 0.24);
-  border-color: rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 28px 42px rgba(6, 4, 4, 0.32);
+  border-color: rgba(215, 160, 108, 0.3);
+  background: rgba(255, 248, 239, 0.12);
 }
 
 .visual-kicker {
@@ -298,8 +299,8 @@
 
 .stat-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 36px rgba(143, 83, 255, 0.16);
-  border-color: rgba(143, 83, 255, 0.24);
+  box-shadow: 0 18px 36px rgba(var(--accent-rgb), 0.16);
+  border-color: rgba(var(--accent-rgb), 0.24);
 }
 
 .stat-number {
@@ -327,7 +328,7 @@
 
 .focus-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 36px rgba(143, 83, 255, 0.16);
+  box-shadow: 0 18px 36px rgba(var(--accent-rgb), 0.16);
 }
 
 .focus-card h3 {

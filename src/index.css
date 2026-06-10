@@ -90,25 +90,31 @@ body {
 }
 
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --border-color: hsl(0, 22%, 90%);
-  --nav-bg: #ffffff;
+  --bg-color: #f3ede2;
+  --text-color: #161310;
+  --border-color: #dbcfbe;
+  --nav-bg: rgba(243, 237, 226, 0.88);
   --nav-blur: none;
-  --hover-bg: #f2f2f2;
-  --time-bg: #fafafa;
-  --muted-text: #999;
-  --card-bg: #fff;
-  --card-border: rgb(226, 224, 224);
-  --secondary-bg: #f2f1f2;
-  --nav-link-color: oklch(42.571% 0.00822 285.966);
-  --chip-bg: rgb(0, 0, 0);
-  --chip-text: aliceblue;
-  --subtitle-color: oklch(55.2% .016 285.938);
-  --stats-heading: oklch(55.2% .016 285.938);
-  --hireable-bg: oklch(0.93 0.06 152.3);
-  --card-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-  --card-shadow-hover: 0 22px 42px rgba(143, 83, 255, 0.14);
+  --hover-bg: #ebe0d1;
+  --time-bg: #ece2d4;
+  --muted-text: #6f6357;
+  --card-bg: #faf5ec;
+  --card-border: #dbcfbe;
+  --secondary-bg: #f1e7da;
+  --nav-link-color: #6a5d50;
+  --chip-bg: #161310;
+  --chip-text: #f3ede2;
+  --subtitle-color: #6f6357;
+  --stats-heading: #6f6357;
+  --hireable-bg: #efe3d4;
+  --accent-color: #9a5f32;
+  --accent-strong: #7d431d;
+  --accent-soft: rgba(154, 95, 50, 0.12);
+  --accent-rgb: 154, 95, 50;
+  --hero-surface-start: #1a1412;
+  --hero-surface-end: #3a2418;
+  --card-shadow: 0 18px 44px rgba(17, 11, 8, 0.08);
+  --card-shadow-hover: 0 24px 48px rgba(var(--accent-rgb), 0.16);
   --card-radius-lg: 1.6rem;
   --card-radius-md: 1.2rem;
 }
