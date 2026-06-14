@@ -77,18 +77,53 @@ export default function Home() {
         </div>
 
         <div className="hero-visual">
-          <div className="visual-stack">
-            <div className="visual-card visual-card-main">
-              <span className="visual-kicker">Current focus</span>
-              <strong>React interfaces</strong>
-              <p>Design-forward components with strong UX polish.</p>
+          <section className="terminal-panel" aria-label="Developer terminal preview">
+            <div className="terminal-toolbar">
+              <div className="terminal-dots" aria-hidden="true">
+                <span className="terminal-dot dot-red" />
+                <span className="terminal-dot dot-amber" />
+                <span className="terminal-dot dot-green" />
+              </div>
+              <span className="terminal-title">portfolio-session.sh</span>
             </div>
-            <div className="visual-card visual-card-secondary">
-              <span className="visual-kicker">Also building</span>
-              <strong>APIs and product flows</strong>
-              <p>Reliable backend wiring behind smooth frontends.</p>
+
+            <div className="terminal-body">
+              <div className="terminal-line">
+                <span className="terminal-prompt">$</span>
+                <span className="terminal-command">whoami</span>
+              </div>
+              <div className="terminal-output">Mayank Kumar · Software Engineer</div>
+
+              <div className="terminal-line">
+                <span className="terminal-prompt">$</span>
+                <span className="terminal-command">stack --current</span>
+              </div>
+              <div className="terminal-chip-row">
+                <span className="terminal-chip">React</span>
+                <span className="terminal-chip">JavaScript</span>
+                <span className="terminal-chip">Node.js</span>
+                <span className="terminal-chip">REST APIs</span>
+              </div>
+
+              <div className="terminal-line">
+                <span className="terminal-prompt">$</span>
+                <span className="terminal-command">status --focus</span>
+              </div>
+              <div className="terminal-block">
+                <span>Building polished frontend systems</span>
+                <span>Shipping product-friendly backend integrations</span>
+                <span>Keeping UX, performance, and maintainability aligned</span>
+              </div>
+
+              <div className="terminal-line">
+                <span className="terminal-prompt">$</span>
+                <span className="terminal-command">availability</span>
+              </div>
+              <div className="terminal-output terminal-output-accent">
+                Open to impactful product work
+              </div>
             </div>
-          </div>
+          </section>
         </div>
       </section>
 
