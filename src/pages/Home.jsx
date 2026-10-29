@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
-import NavigationBtn from "../components/Navigation-Btn";
-import PageHeader from "../components/PageHeader";
-import { useSelector } from "react-redux";
+import GithubActivity from "../components/GithubActivity";
 
 export default function Home() {
-  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
   const focusAreas = [
     {
       title: "Frontend systems",
@@ -22,58 +20,18 @@ export default function Home() {
   ];
 
   return (
-    <>
-      <PageHeader
-        title="Mayank Kumar"
-        subtitle="Software engineer crafting sharp, usable web experiences."
-        description="I build modern products across frontend and backend with a focus on clean UI, reliable systems, and details that make software feel premium."
-      />
-
-      <section className="hero-shell">
+    <div className="introduction-page">
+      <section className="hero-shell" aria-labelledby="intro-title">
         <div className="hero-copy">
-          <div className="hero-pill">Open to impactful product work</div>
-          <p className="hero-lead">
-            I like interfaces with personality, systems with discipline, and
-            products that make sense the first time someone uses them.
-          </p>
+          <span className="intro-eyebrow">SOFTWARE ENGINEER · FULL STACK DEVELOPER</span>
+          <h1 id="intro-title">Mayank <span>Kumar</span></h1>
+          <p className="hero-subtitle">Thoughtful interfaces.<br />Reliable software.</p>
+          <p className="hero-lead">I build modern products across frontend and backend with a focus on clean UI, reliable systems, and details that make software feel premium.</p>
           <div className="button-row">
-            <div className="btn-primary">
-              <a
-                href="https://drive.google.com/file/d/1VyAPpX0a5qW4yDBw5Dvxibu8R75wU2h0/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                className="btn-link"
-              >
-                <span>Get Resume</span>
-                <img
-                  src="https://img.icons8.com/?size=100&id=60664&format=png&color=FFFFFF"
-                  alt="Link"
-                />
-              </a>
-            </div>
-
-            <div className="btn-outline">
-              <img
-                src={
-                  isDarkMode
-                    ? "https://img.icons8.com/ios-filled/50/FFFFFF/gmail-new.png"
-                    : "https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=1A1A1A"
-                }
-                alt="Email"
-              />
-              <a
-                href="mailto:mayankkr4554@gmail.com"
-                className="btn-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mayankkr4554@gmail.com`;
-                  window.open(gmailUrl, "_blank");
-                }}
-              >
-                <span>Send Email</span>
-              </a>
-            </div>
+            <a href="https://drive.google.com/file/d/1VyAPpX0a5qW4yDBw5Dvxibu8R75wU2h0/view?usp=sharing" target="_blank" rel="noreferrer" className="intro-button intro-button-primary">Get Resume <span aria-hidden="true">↗</span></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mayankkr4554@gmail.com" target="_blank" rel="noreferrer" className="intro-button intro-button-secondary">Send Email <span aria-hidden="true">↗</span></a>
           </div>
+          <div className="hero-availability"><span aria-hidden="true" />Open to impactful product work</div>
         </div>
 
         <div className="hero-visual">
@@ -127,7 +85,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="stats-strip">
+      <GithubActivity />
+
+      <section className="intro-expertise" aria-labelledby="expertise-title">
+      <div className="intro-section-heading"><span className="intro-eyebrow">FROM IDEA TO IMPLEMENTATION</span><h2 id="expertise-title">What I bring to the build</h2></div>
+      <div className="stats-strip">
         <article className="stat-card">
           <span className="stat-number">Frontend</span>
           <span className="stat-label">Component systems, layouts, motion, accessibility</span>
@@ -140,29 +102,23 @@ export default function Home() {
           <span className="stat-number">Product</span>
           <span className="stat-label">Clean execution from idea to shipped experience</span>
         </article>
-      </section>
+      </div>
 
-      <section className="focus-grid">
-        {focusAreas.map((area) => (
+      <div className="focus-grid">
+        {focusAreas.map((area, index) => (
           <article className="focus-card" key={area.title}>
+            <span className="focus-index" aria-hidden="true">0{index + 1}</span>
             <h3>{area.title}</h3>
             <p>{area.text}</p>
           </article>
         ))}
+      </div>
       </section>
 
-      <Link
-        to="/about"
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "flex-end",
-          textDecoration: "none",
-          paddingTop: "3em",
-        }}
-      >
-        <NavigationBtn text="About me" />
-        </Link>
-    </>
+      <div className="intro-next">
+        <div><span className="intro-eyebrow">A LITTLE MORE CONTEXT</span><p>The person behind the code.</p></div>
+        <Link to="/about" className="intro-button intro-button-secondary">About me <span aria-hidden="true">→</span></Link>
+      </div>
+    </div>
   );
 }

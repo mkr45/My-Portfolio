@@ -35,9 +35,6 @@ export default function SideNavbar() {
           <span className="nav-text">Contact</span>
         </Link>
 
-        <Link to="/stats" className="nav-button">
-          <span className="nav-text">Stats</span>
-        </Link>
       </div>
     </aside>
   );

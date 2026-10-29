@@ -6,12 +6,9 @@ import App from "./App.jsx";
 import Navbar from "./components/Navbar.jsx";
 import SideNavbar from "./components/Side-Navbar.jsx";
 import Footer from "./components/Footer.jsx";
-import { store } from "./redux/store.js";
-import { Provider } from "react-redux";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-     <Provider store={store}>
       <BrowserRouter>
         <Navbar />
         <div className="page">
@@ -24,6 +21,5 @@ createRoot(document.getElementById("root")).render(
         </div>
         <Footer />
       </BrowserRouter>
-     </Provider>
   </StrictMode>,
 );

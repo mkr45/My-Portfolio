@@ -3,15 +3,12 @@ import { Link } from "react-router-dom";
 import React, { useState, useRef, useEffect } from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import melodiesOfIndia from "../assets/Melodies of India.mp3";
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleDarkMode } from '../redux/themeSlice';
 
 
 export default function Navbar() {
   const [currentTime, setCurrentTime] = useState("");
   const audioRef = useRef(null);
-  const isDarkMode  = useSelector((state) => state.theme.isDarkMode);
-  const dispatch = useDispatch();
+
 
   useEffect(() => {
     function getCurrentTime24Hour() {
@@ -44,7 +41,7 @@ export default function Navbar() {
       <div className="nav-start">
         <Link to="/">
          <img
-          src={ isDarkMode ? "https://img.icons8.com/forma-regular-filled/24/FFFFFF/happy-skull.png" : "https://img.icons8.com/forma-light-filled/24/1A1A1A/happy-skull.png"}
+          src="https://img.icons8.com/forma-regular-filled/24/FFFFFF/happy-skull.png"
           alt="logo"
           className="icon-home"
         />
@@ -67,7 +64,7 @@ export default function Navbar() {
           >
             Linkedin
               <img
-          src={ isDarkMode ? "https://img.icons8.com/forma-regular-filled/24/FFFFFF/shortcut.png" : "https://img.icons8.com/?size=100&id=60664&format=png&color=1A1A1A"}
+          src="https://img.icons8.com/forma-regular-filled/24/FFFFFF/shortcut.png"
           alt="Link"
           style={{height: "0.9em", width: "1em", paddingLeft: "0.3em",}}
  
@@ -84,7 +81,7 @@ export default function Navbar() {
           >
             Resume
                <img
-          src={ isDarkMode ? "https://img.icons8.com/forma-regular-filled/24/FFFFFF/shortcut.png" : "https://img.icons8.com/?size=100&id=60664&format=png&color=1A1A1A"}
+          src="https://img.icons8.com/forma-regular-filled/24/FFFFFF/shortcut.png"
           alt="Link"
           style={{height: "0.9em", width: "1em", paddingLeft: "0.3em"}}
  
@@ -114,22 +111,15 @@ export default function Navbar() {
 
         {/* 🎵 PLAY / PAUSE BUTTON */}
         <img
-          src={isDarkMode ?"https://img.icons8.com/forma-regular-filled/24/FFFFFF/musical-notes.png" : "https://img.icons8.com/?size=100&id=aanJRSdBR4ug&format=png&color=000000"}
+          src="https://img.icons8.com/forma-regular-filled/24/FFFFFF/musical-notes.png"
           alt="music"
           className="icon"
           onClick={playMusic}   
         />
 
-          <img
-            src={isDarkMode ? "https://img.icons8.com/fluency/48/sun.png" : "https://img.icons8.com/?size=100&id=45474&format=png&color=000000"}
-            alt="dark mode"
-            className="icon"
-            onClick={() => dispatch(toggleDarkMode())}
-          />
-
         <a href="https://github.com/mkr45" target="_blank" rel="noreferrer">
           <img
-            src={ isDarkMode ? "https://img.icons8.com/forma-regular-filled/24/FFFFFF/github.png" : "https://img.icons8.com/?size=100&id=62856&format=png&color=000000"}
+            src="https://img.icons8.com/forma-regular-filled/24/FFFFFF/github.png"
             alt="GitHub"
             className="icon-github"
           />

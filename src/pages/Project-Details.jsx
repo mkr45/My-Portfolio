@@ -2,12 +2,11 @@ import { useParams } from "react-router";
 import { projectsData } from "../components/projectsData";
 import PageHeader from "../components/PageHeader";
 import ProjectDetailsCard from "../components/Project-Detalis-Card";
-import { useSelector } from "react-redux";
 import "./Project-Details.css";
 
 export default function ProjectDetails() {
   const { id } = useParams();
-  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
 
   const project = projectsData.find((p) => p.heading === id);
   const projectTechStack = project.techstack;
@@ -83,10 +82,7 @@ export default function ProjectDetails() {
         >
           <div className="link-button link-button-secondary">
             <img 
-              src={!isDarkMode 
-                ? "https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/FFFFFF/external-github-social-media-tanah-basah-glyph-tanah-basah.png" 
-                : "https://img.icons8.com/sf-black-filled/64/1A1A1A/github.png"
-              }
+              src="https://img.icons8.com/sf-black-filled/64/1A1A1A/github.png"
               alt="github" 
               style={{ width: "1.2em", height: "1.2em" }}
             />

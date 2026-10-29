@@ -129,8 +129,8 @@ export default function Contact() {
         <Link to="/education" style={{ textDecoration: "none" }}>
           <NavigationBtnPrev text="Education" />
         </Link>
-        <Link to="/stats" style={{ textDecoration: "none" }}>
-          <NavigationBtn text="Stats" />
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <NavigationBtn text="Introduction" />
         </Link>
       </div>
     </>

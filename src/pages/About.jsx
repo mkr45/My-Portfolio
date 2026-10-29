@@ -13,9 +13,9 @@ export default function About() {
 
   const profileCards = [
     {
-      label: "Current role",
-      title: "Software Engineer at RSL",
-      text: "Working across frontend and backend features, shipping product improvements and solving real implementation problems.",
+      label: "How I work",
+      title: "Understand. Build. Refine.",
+      text: "I break down complex problems, build accessible solutions, and use testing and feedback to improve the details that matter.",
     },
     {
       label: "Based in",

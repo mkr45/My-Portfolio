@@ -1,16 +1,11 @@
 import "./Experience-Card.css"
-import { useSelector } from "react-redux";
 
 
 export default function ExperienceCard(props) {
-  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
   const iconUrl = props.type === "education" 
-    ? (isDarkMode
-        ? "https://img.icons8.com/ios-glyphs/50/FFFFFF/education.png"
-        : "https://img.icons8.com/ios-glyphs/50/1A1A1A/education.png")
-    : (isDarkMode
-        ? "https://img.icons8.com/ios-filled/50/FFFFFF/briefcase-settings.png"
-        : "https://img.icons8.com/ios-filled/50/1A1A1A/briefcase-settings.png");
+    ? "https://img.icons8.com/ios-glyphs/50/FFFFFF/education.png"
+    : "https://img.icons8.com/ios-filled/50/FFFFFF/briefcase-settings.png";
   
   return (
     <article className="experience-item">
