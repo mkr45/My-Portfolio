@@ -37,6 +37,22 @@
 .introduction-page .terminal-chip { padding: .25rem .55rem; border: 1px solid var(--card-border); border-radius: .35rem; background: rgba(255,255,255,.025); color: #d6c5b6; font-size: .68rem; }
 .introduction-page .terminal-block { display: grid; gap: .4rem; }
 .introduction-page .terminal-block span::before { content: "> "; color: var(--accent-color); }
+.introduction-page .hero-shell { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; row-gap: 2rem; }
+.hero-heading { grid-column: 1 / -1; }
+.introduction-page .hero-heading h1 { font-size: clamp(3.25rem, 6vw, 6rem); margin: .25rem 0 .75rem; line-height: 1; }
+.hero-role { margin: 0; color: var(--accent-strong); font-size: clamp(.72rem, 1.1vw, 1rem); font-weight: 700; letter-spacing: .12em; line-height: 1.6; }
+.introduction-page .hero-copy .terminal-panel { width: 100%; height: 100%; min-height: 480px; display: flex; flex-direction: column; }
+.introduction-page .hero-copy .terminal-body { flex: 1; justify-content: space-between; gap: .55rem; padding: 1.1rem 1.2rem; }
+.portrait-panel { position: relative; isolation: isolate; height: 480px; margin: 0; overflow: hidden; border: 1px solid var(--card-border); border-radius: 1.5rem; background: radial-gradient(ellipse at 50% 42%, #61432d 0%, #2b201a 38%, #161311 74%); box-shadow: 0 24px 64px rgba(0,0,0,.22); }
+.portrait-panel::after { content: ""; position: absolute; z-index: 2; inset: 55% 0 0; background: linear-gradient(transparent, rgba(13,13,13,.45) 55%, #11100f); pointer-events: none; }
+.portrait-orbit { position: absolute; width: 80%; aspect-ratio: 1; border: 1px solid rgba(var(--accent-rgb),.28); border-radius: 50%; top: 17%; left: 10%; box-shadow: 0 0 0 25px rgba(var(--accent-rgb),.035), 0 0 0 60px rgba(var(--accent-rgb),.025); }
+.portrait-kicker { position: absolute; top: 1.5rem; left: 1.5rem; z-index: 3; color: #cfbba7; font-size: .57rem; font-weight: 600; letter-spacing: .17em; }
+.portrait-monogram { position: absolute; top: 3.5rem; right: .5rem; color: rgba(var(--accent-rgb),.12); font-size: clamp(6rem, 10vw, 9rem); line-height: 1; font-weight: 800; letter-spacing: -.08em; }
+.hero-portrait { position: absolute; z-index: 1; bottom: 0; left: 50%; transform: translateX(-50%); display: block; height: 118%; width: auto; max-width: none; filter: drop-shadow(0 12px 25px rgba(0,0,0,.3)); }
+.portrait-caption { position: absolute; z-index: 3; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; padding-top: 1rem; border-top: 1px solid rgba(215,160,108,.25); }
+.portrait-caption-label { display: block; color: var(--accent-strong); font-size: .57rem; letter-spacing: .17em; margin-bottom: .25rem; }
+.portrait-caption strong { font-size: 1.15rem; letter-spacing: -.03em; color: #f3ede2; }
+.portrait-caption-detail { text-align: right; font-size: .65rem; line-height: 1.6; color: #c1b1a2; }
 .introduction-page .stats-shell { margin-top: 1.75rem; padding-top: 2.5rem; border-top: 1px solid var(--card-border); gap: var(--intro-gap); }
 .introduction-page .stats-introduction h2, .intro-section-heading h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); letter-spacing: -.035em; line-height: 1.2; }
 .introduction-page .stats-introduction p { font-size: .9rem; }
@@ -63,10 +79,14 @@
 .introduction-page .stat-card:hover, .introduction-page .focus-card:hover { border-color: rgba(var(--accent-rgb), .5); transform: translateY(-3px); }
 .intro-next { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: 3rem; padding: 1.75rem 0 0; border-top: 1px solid var(--card-border); }
 .intro-next p { margin: .3rem 0 0; font-size: 1.1rem; font-weight: 600; }
-@media (min-width: 1101px) and (max-width: 1250px) { .introduction-page .hero-shell { grid-template-columns: 1fr; } }
+@media (min-width: 1101px) and (max-width: 1250px) { .introduction-page .hero-shell { gap: 1.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 760px) {
   .introduction-page .hero-shell { grid-template-columns: 1fr; padding-top: .75rem; gap: 2rem; }
   .introduction-page h1 { font-size: clamp(3rem, 10vw, 4.5rem); }
+  .introduction-page .hero-heading h1 { font-size: clamp(2.8rem, 10vw, 4.5rem); }
+  .hero-role { font-size: .7rem; letter-spacing: .08em; }
+  .introduction-page .hero-copy .terminal-panel { min-height: 440px; }
+  .portrait-panel { height: 440px; }
   .introduction-page .hero-lead { max-width: 55ch; }
   .introduction-page .stats-strip, .introduction-page .focus-grid { grid-template-columns: 1fr; }
   .introduction-page .stats-analytics-card { min-height: 0; }

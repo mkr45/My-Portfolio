@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
 import GithubActivity from "../components/GithubActivity";
+import portrait from "../assets/mayank-portrait.png";
 
 export default function Home() {
 
@@ -22,19 +23,11 @@ export default function Home() {
   return (
     <div className="introduction-page">
       <section className="hero-shell" aria-labelledby="intro-title">
-        <div className="hero-copy">
-          <span className="intro-eyebrow">SOFTWARE ENGINEER · FULL STACK DEVELOPER</span>
+        <header className="hero-heading">
           <h1 id="intro-title">Mayank <span>Kumar</span></h1>
-          <p className="hero-subtitle">Thoughtful interfaces.<br />Reliable software.</p>
-          <p className="hero-lead">I build modern products across frontend and backend with a focus on clean UI, reliable systems, and details that make software feel premium.</p>
-          <div className="button-row">
-            <a href="https://drive.google.com/file/d/1VyAPpX0a5qW4yDBw5Dvxibu8R75wU2h0/view?usp=sharing" target="_blank" rel="noreferrer" className="intro-button intro-button-primary">Get Resume <span aria-hidden="true">↗</span></a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mayankkr4554@gmail.com" target="_blank" rel="noreferrer" className="intro-button intro-button-secondary">Send Email <span aria-hidden="true">↗</span></a>
-          </div>
-          <div className="hero-availability"><span aria-hidden="true" />Open to impactful product work</div>
-        </div>
-
-        <div className="hero-visual">
+          <p className="hero-role">SOFTWARE ENGINEER · FULL STACK DEVELOPER</p>
+        </header>
+        <div className="hero-copy">
           <section className="terminal-panel" aria-label="Developer terminal preview">
             <div className="terminal-toolbar">
               <div className="terminal-dots" aria-hidden="true">
@@ -82,6 +75,18 @@ export default function Home() {
               </div>
             </div>
           </section>
+        </div>
+        <div className="hero-visual">
+          <figure className="portrait-panel">
+            <div className="portrait-orbit" aria-hidden="true" />
+            <span className="portrait-kicker" aria-hidden="true">THE PERSON BEHIND THE CODE</span>
+            <span className="portrait-monogram" aria-hidden="true">MK</span>
+            <img className="hero-portrait" src={portrait} alt="Mayank Kumar wearing glasses and a black hoodie" width="433" height="577" fetchPriority="high" />
+            <figcaption className="portrait-caption">
+              <div><span className="portrait-caption-label">HELLO, I’M</span><strong>Mayank Kumar</strong></div>
+              <span className="portrait-caption-detail">Engineer by craft.<br />Builder at heart.</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
